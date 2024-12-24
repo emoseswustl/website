@@ -82,6 +82,7 @@ main {
     background-color: #1E1E1E;
     color: #FFFFFF;
     flex-shrink: 2;
+    overflow-y: scroll;
 }
 
 .row {
