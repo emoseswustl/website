@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: max-content;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -40,14 +41,17 @@ body {
     text-decoration: none;
 }
 
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .links button {
     text-align: center;
     border-radius: 10px;
     width: 225px;
     height: 50px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
     flex-shrink: 0;
     border: 0;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -60,6 +64,22 @@ body {
 
 .links button a {
     display: block;
+}
+
+.sm_buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.sm_buttons button {
+    text-align: center;
+    border-radius: 20px;
+    border: 0;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    cursor: pointer;
 }
 
 #current {
