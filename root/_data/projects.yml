@@ -23,4 +23,4 @@
   skills: HTML, CSS, Figma, Jekyll
   github: https://github.com/emoseswustl/website
   link: https://ethanmos.es
-  description: Designed and built a personal portfolio from scratch, using Figma to craft a template and Jekyll to speed development and store repetitive elements (such as these projects) in data files that I can read from and display.
+  description: Designed and built a personal portfolio from scratch, using Figma to craft a template and Jekyll to speed development and store repetitive elements (such as these projects) in YAML files to be displayed in templates.

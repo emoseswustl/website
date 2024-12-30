@@ -16,15 +16,11 @@ title: Home
     <h2>Most Recent Projects</h2>
     <a href="/projects.html"><button>More &gt;</button></a>
 </div>
-<div class="row">
-    <div class="feature_rect">
-        <h3>One</h3>
-        <p>Some text here</p>
-    </div>
-    <div class="feature_rect">
-        <h3>Two</h3>
-        <p>Some text here</p>
-    </div>
+<div class="project_row">
+    {% assign projects_by_date = site.data.projects | sort: "date" | reverse %}
+    {% for project in projects_by_date limit:2 %}
+        {% include project_content.html %}
+    {% endfor %}
 </div>
 <br>
 

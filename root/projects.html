@@ -8,11 +8,6 @@ title: Projects
 <div class="project_row">
     {% assign projects_by_date = site.data.projects | sort: "date" | reverse %}
     {% for project in projects_by_date %}
-        <div class="feature_rect">
-            <h2>{{ project.name }}</h2>
-            <p>{{ project.skills }}</p>
-            <small>{{ project.date | date: "%B %Y" }}</small>
-            <p>{{ project.description }}</p>
-        </div>
+        {% include project_content.html %}
     {% endfor %}
 </div>
