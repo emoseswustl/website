@@ -1,0 +1,9 @@
+---
+layout: default
+title: Projects
+---
+<div class="row">
+    {% for project in site.data.projects %}
+        <h2>{{ project.name }}</h2>
+    {% endfor %}
+</div>
