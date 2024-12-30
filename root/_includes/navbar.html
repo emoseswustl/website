@@ -1,0 +1,20 @@
+<div class="navbar">
+    <div class="logo">
+        <img class="pfp" src="/assets/img/profile.jpg" alt="profile picture">
+        <a href="/">Ethan Moses</a>
+    </div>
+    <div class="links">
+        {% for nav in site.data.navbar_pages %}
+        <a href="{{ nav.link }}">
+            <button {% if page.url == nav.link %}id="current"{% endif %}>
+                {{ nav.name }}
+            </button>
+        </a>
+        {% endfor %}
+    </div>
+    <div class="sm_buttons">
+        <a href="https://www.linkedin.com/in/ethanmoses04/"><button><i class="fa-brands fa-linkedin"></i></button></a>
+        <a href="https://github.com/emoseswustl"><button><i class="fa-brands fa-github"></i></button></a>
+        <a href="mailto:e.g.moses@wustl.edu"><button><i class="fa-regular fa-envelope"></i></button></a>
+    </div>
+</div>
