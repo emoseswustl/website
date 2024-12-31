@@ -158,6 +158,10 @@ main {
     flex-grow: 1;
 }
 
-.feature_rect > h3, .feature_rect > h2 {
+.feature_rect h3, .feature_rect h2 {
     margin-top: 0;
+}
+
+.semi {
+    font-weight: 600;
 }
