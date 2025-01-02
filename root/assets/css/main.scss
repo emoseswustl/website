@@ -35,6 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
 }
 
 .logo {
@@ -51,12 +52,6 @@ body {
     color: var(--color-white);
     font-weight: 600;
     text-decoration: none;
-}
-
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
 .links button {
@@ -83,7 +78,7 @@ body {
     gap: 20px;
 }
 
-.sm_buttons button {
+.sm_buttons button, .menubutton button {
     text-align: center;
     border-radius: 20px;
     border: 0;
@@ -107,14 +102,14 @@ body {
     align-items: center;
     padding: 20px 30px;
     background: linear-gradient(var(--color-gradient-start), var(--color-gradient-end));
-}
+}   
 
 main {
     padding: 20px 100px;
     background-color: var(--color-dark-gray);
     color: var(--color-white);
     flex-grow: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .title_and_button {
@@ -158,6 +153,50 @@ main {
     flex-grow: 1;
 }
 
-.feature_rect > h3, .feature_rect > h2 {
+.feature_rect h3, .feature_rect h2 {
     margin-top: 0;
+}
+
+.semi {
+    font-weight: 600;
+}
+
+@media screen and (min-width: 1200px) {
+    .menubutton {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar {
+        z-index: 10;
+        position: fixed;
+        top: 0px;
+        width: calc(100vw - 60px);
+        max-height: 80px;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: calc(100vw - 60px);
+    }
+    body {
+        flex-direction: column;
+        margin-top: 120px;
+    }
+    main {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        height: calc(100vh - 160px);
+    }
+    .links {
+        padding: 40px 0px;
+    }
+    .show_all {
+        max-height: 600px;
+    }
 }
