@@ -1,7 +1,12 @@
 <div class="navbar">
-    <div class="logo">
-        <img class="pfp" src="/assets/img/profile.jpg" alt="profile picture">
-        <a href="/">Ethan Moses</a>
+    <div class="header">
+        <div class="logo">
+            <img class="pfp" src="/assets/img/profile.jpg" alt="profile picture">
+            <a href="/">Ethan Moses</a>
+        </div>
+        <div class="menubutton">
+            <button id="menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
     </div>
     <div class="links">
         {% for nav in site.data.navbar_pages %}
