@@ -3,4 +3,10 @@ layout: default
 title: Experience
 ---
 
-<p>coming soon!</p>
+<div class="description">
+    <h2>My projects, from most recent to least:</h2>
+</div>
+{% for experience in site.data.jobs %}
+    {% include exp_content.html %}
+    <br>
+{% endfor %}
