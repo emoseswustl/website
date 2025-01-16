@@ -1,0 +1,22 @@
+- company: BJC Health System (formerly BJC HealthCare)
+  role: Software Development Intern
+  location: St. Louis, MO
+  duration: Jul 2024 - present
+  description:
+    - Solely authored a new full-stack feature that integrated lot number creation and deactivation into BJC's vaccination consent form, eliminating the need for a database administrator to manually insert records.
+    - Upgraded two web apps from Angular version 12 to 18, cutting build times by more than 50%.
+    - Increased test coverage beyond quality gates for both the Angular front-end and Spring Data back-end codebases, reducing time spent fixing bugs that made it to deployment and speeding up supervisor's code reviews.
+- company: WashU McKelvey School of Engineering
+  role: Section Lead Teaching Assistant for CSE 131
+  location: St. Louis, MO
+  duration: Jan 2024 - present
+  description:
+    - Promoted to role by head TAs after positive feedback from students in studios. Managed 15-20 TAs during studio and office hours sections by taking attendance and helping solve bugs impeding student progress.
+    - Enhanced student progress outcomes by guiding groups of up to 6 TAs during three training sessions per semester, and coaching 4-5 TAs each semester to help them build their teaching resources and skills.
+- company: WashU McKelvey School of Engineering
+  role: Teaching Assistant for CSE 131
+  location: St. Louis, MO
+  duration: Jan 2023 - Jan 2024
+  description:
+    - Worked to increase students' deep-level understanding in WashU's Java-based Intro to CS course during studio sessions, utilizing interrogative teaching and informing them about relevant topics to help them through sticking points.
+    - Assisted students with coding assignments during office hours sessions by quickly troubleshooting their code and utilizing leading questions to guide them toward a solution.

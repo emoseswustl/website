@@ -26,11 +26,10 @@ title: Home
 
 <div class="title_and_button">
     <h2>Experience and Skills</h2>
-    <a href="https://www.linkedin.com/in/ethanmoses04/"><button>More &gt;</button></a>
+    <a href="/experience.html"><button>More &gt;</button></a>
 </div>
 <div class="row">
-    <div class="feature_rect">
-        <h3>One</h3>
-        <p>Some text here</p>
-    </div>
+    {% for experience in site.data.jobs limit:1 %}
+        {% include exp_content.html %}
+    {% endfor %}
 </div>
