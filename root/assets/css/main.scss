@@ -31,6 +31,10 @@ body {
     margin: 0px;
 }
 
+.header, .links, .sm_buttons {
+    padding: 20px 30px;
+}
+
 .links {
     display: flex;
     flex-direction: column;
@@ -54,6 +58,10 @@ body {
     text-decoration: none;
 }
 
+button {
+    background-color: var(--color-light-gray);
+}
+
 .links button {
     text-align: center;
     border-radius: 10px;
@@ -65,7 +73,6 @@ body {
     color: var(--color-black);
     font-size: 22px;
     font-weight: 600;
-    background-color: var(--color-light-gray);
     cursor: pointer;
 }
 
@@ -95,12 +102,19 @@ body {
     filter: none;
 }
 
+body {
+    display: flex;
+    flex-direction: row;
+}
+
 .navbar {
     display: flex;
+    position: fixed;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
+    height: 100vh;
+    width: 300px;
     background: linear-gradient(var(--color-gradient-start), var(--color-gradient-end));
 }   
 
@@ -109,7 +123,8 @@ main {
     background-color: var(--color-dark-gray);
     color: var(--color-white);
     flex-grow: 1;
-    overflow-y: auto;
+    overflow-y: scroll;
+    margin-left: 300px;
 }
 
 .title_and_button {
@@ -190,11 +205,12 @@ main {
 
 @media screen and (max-width: 1200px) {
     .navbar {
+        height: auto;
         z-index: 10;
         position: fixed;
         top: 0px;
-        width: calc(100vw - 60px);
-        max-height: 80px;
+        width: 100vw;
+        max-height: 120px;
         transition: max-height 0.5s ease-out;
         overflow: hidden;
     }
@@ -203,8 +219,10 @@ main {
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
-        width: calc(100vw - 60px);
+        width: 90vw;
+        padding: 20px 0px;
     }
+
     body {
         flex-direction: column;
         margin-top: 120px;
@@ -212,17 +230,19 @@ main {
     main {
         padding-left: 5vw;
         padding-right: 5vw;
+        margin-left: 0px;
         height: calc(100vh - 160px);
     }
     .links {
-        padding: 40px 0px;
+        padding: 20px 0px;
+        flex-direction: row;
+    }
+
+    .links button {
+        width: auto;
+        padding: 0px 20px;
     }
     .show_all {
         max-height: 600px;
     }
-}
-
-@viewport {
-    width: device-width;
-    zoom: 1.0;
 }
