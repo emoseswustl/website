@@ -4,7 +4,21 @@ title: Experience
 ---
 
 <div class="description">
-    <h2>Skills and Experience</h2>
+    <h2>Education</h2>
+</div>
+{% for edu in site.data.education %}
+    {% include edu_content.html %}
+    <br>
+{% endfor %}
+
+<div class="description">
+    <h2>Technical Skills</h2>
+</div>
+{% include skills_content.html %}
+<br>
+
+<div class="description">
+    <h2>Experience</h2>
 </div>
 {% for experience in site.data.jobs %}
     {% include exp_content.html %}

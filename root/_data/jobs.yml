@@ -1,7 +1,15 @@
+- company: Maritz
+  role: Product Engineering Intern
+  location: Fenton, MO
+  duration: Jun 2025 - Aug 2025
+  description:
+    - Wrote Karate tests and a Scala runner file for Gatling with a colleague to enable the load testing of Kubernetes services before and after the addition of read replica databases.
+    - Conducted a proof of concept for an app-wide switch to read replicas by connecting a service to PgCat, then modifying PgCat's settings in between load tests, which identified the most performant configuration.
+    - Created indices within Liquibase for SQL tables within the user management service and modified Spring Data queries to match the order of new and existing indices, reducing query times by 75%.
 - company: BJC Health System (formerly BJC HealthCare)
   role: Software Development Intern
   location: St. Louis, MO
-  duration: Jul 2024 - present
+  duration: Jul 2024 - May 2025
   description:
     - Solely authored a new full-stack feature that integrated lot number creation and deactivation into BJC's vaccination consent form, eliminating the need for a database administrator to manually insert records.
     - Upgraded two web apps from Angular version 12 to 18, cutting build times by more than 50%.
