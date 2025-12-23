@@ -1,14 +1,46 @@
-<div class="feature_rect skills_section">
-    <h3>Software Development</h3>
-    <p><strong>Languages:</strong> {{ site.data.skills.languages | join: ", " }}</p>
-    <p><strong>Developer Tools:</strong> {{ site.data.skills.developer_tools | join: ", " }}</p>
-    <p><strong>Technologies/Frameworks:</strong> {{ site.data.skills.technologies | join: ", " }}</p>
-</div>
+<div class="skills-grid">
+    <div class="feature_rect skill-category">
+        <h4><i class="fa-solid fa-code"></i> Languages</h4>
+        <div class="skill-tags">
+            {% for skill in site.data.skills.languages %}
+            <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
 
-<br>
+    <div class="feature_rect skill-category">
+        <h4><i class="fa-solid fa-toolbox"></i> Developer Tools</h4>
+        <div class="skill-tags">
+            {% for skill in site.data.skills.developer_tools %}
+            <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
 
-<div class="feature_rect skills_section">
-    <h3>Design</h3>
-    <p><strong>Techniques:</strong> {{ site.data.skills.techniques | join: ", " }}</p>
-    <p><strong>Applications:</strong> {{ site.data.skills.applications | join: ", " }}</p>
+    <div class="feature_rect skill-category">
+        <h4><i class="fa-solid fa-gears"></i> Technologies</h4>
+        <div class="skill-tags">
+            {% for skill in site.data.skills.technologies %}
+            <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="feature_rect skill-category">
+        <h4><i class="fa-solid fa-paintbrush"></i> Design Techniques</h4>
+        <div class="skill-tags">
+            {% for skill in site.data.skills.techniques %}
+            <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="feature_rect skill-category">
+        <h4><i class="fa-brands fa-figma"></i> Design Applications</h4>
+        <div class="skill-tags">
+            {% for skill in site.data.skills.applications %}
+            <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
 </div>
