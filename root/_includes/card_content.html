@@ -1,0 +1,41 @@
+<div class="feature_rect">
+    <div class="{{ include.type }}_header">
+        {% if include.item.logo %}
+        <div class="{{ include.type }}_logo">
+            <img src="{{ include.item.logo }}" alt="{{ include.item[include.title_key] }}">
+        </div>
+        {% elsif include.item.icon %}
+        <div class="{{ include.type }}_logo {{ include.type }}_icon">
+            <i class="{{ include.item.icon }}"></i>
+        </div>
+        {% endif %}
+        <div class="{{ include.type }}_info">
+            <h3>{{ include.item[include.title_key] }}</h3>
+            {% if include.type == 'edu' %}
+            <h4>{{ include.item.degree }} | {{ include.item.gpa }}</h4>
+            {% else %}
+            <h4>{{ include.item[include.subtitle_key] }}</h4>
+            {% endif %}
+        </div>
+        <span class="duration_badge">{{ include.item.duration }}</span>
+    </div>
+    {% if include.item.description %}
+    <ul>
+        {% for desc in include.item.description %}
+            <li>{{ desc }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if include.item.minors %}
+    <p><strong>Minoring In:</strong> {{ include.item.minors | join: ", " }}</p>
+    {% endif %}
+    {% if include.item.coursework %}
+    <p><strong>Selected Coursework:</strong> {{ include.item.coursework | join: ", " }}</p>
+    {% endif %}
+    {% if include.item.activities %}
+    <p><strong>Activities:</strong> {{ include.item.activities | join: ", " }}</p>
+    {% endif %}
+    {% if include.item.honors %}
+    <p><strong>Honors:</strong> {{ include.item.honors | join: ", " }}</p>
+    {% endif %}
+</div>

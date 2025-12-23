@@ -7,7 +7,7 @@ title: Experience
     <h2>Education</h2>
 </div>
 {% for edu in site.data.education %}
-    {% include edu_content.html %}
+    {% include card_content.html type="edu" item=edu title_key="school" subtitle_key="degree" %}
     <br>
 {% endfor %}
 
@@ -21,6 +21,6 @@ title: Experience
     <h2>Experience</h2>
 </div>
 {% for experience in site.data.jobs %}
-    {% include exp_content.html %}
+    {% include card_content.html type="exp" item=experience title_key="company" subtitle_key="role" %}
     <br>
 {% endfor %}

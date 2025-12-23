@@ -1,18 +1,31 @@
 <div class="feature_rect">
-    <div class="project_header">
-        <div class="project_info">
+    <div class="project_top_row">
+        {% if project.image %}
+        <div class="project_thumbnail">
+            <img src="{{ project.image }}" alt="{{ project.name }}">
+        </div>
+        {% elsif project.icon %}
+        <div class="project_thumbnail project_icon">
+            <i class="{{ project.icon }}"></i>
+        </div>
+        {% endif %}
+        <div class="project_header">
             <h2>{{ project.name }}</h2>
             <p><b class="semi">{{ project.skills }}</b></p>
-            {% if project.link %}
-                <a href="{{ project.link }}"><button class="link"><i class="fa-solid fa-link"></i>Demo</button></a>
-            {% endif %}
-            {% if project.github %}
-                <a href="{{ project.github }}"><button class="github"><i class="fa-brands fa-github"></i>Code</button></a>
-            {% endif %}
-        </div>
-        <div class="project_image">
-
         </div>
     </div>
-    <p>{{ project.description }}</p>
+    <div class="project_description">
+        <p>{{ project.description }}</p>
+    </div>
+    <div class="project_info">
+        {% if project.link %}
+            <a href="{{ project.link }}"><button class="link"><i class="fa-solid fa-link"></i>Demo</button></a>
+        {% endif %}
+        {% if project.figma %}
+            <a href="{{ project.figma }}"><button class="figma"><i class="fa-brands fa-figma"></i>Figma</button></a>
+        {% endif %}
+        {% if project.github %}
+            <a href="{{ project.github }}"><button class="github"><i class="fa-brands fa-github"></i>Code</button></a>
+        {% endif %}
+    </div>
 </div>
