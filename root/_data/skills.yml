@@ -1,0 +1,44 @@
+languages:
+  - Java
+  - Python
+  - C
+  - C++
+  - JavaScript
+  - PHP
+  - TypeScript
+  - AVR Assembly
+  - HTML
+  - CSS
+
+developer_tools:
+  - AWS
+  - GCP (Google Cloud)
+  - Git
+  - SSH
+  - FTP
+  - LaTeX
+  - Eclipse
+  - Jira
+  - Maven
+  - CLion
+
+technologies:
+  - Spring Data
+  - Angular
+  - Django
+  - NumPy
+  - pandas
+  - Node.js
+  - MySQL
+
+techniques:
+  - Human-Centered Design
+  - Iterative
+  - Wireframing
+  - Interaction Design
+
+applications:
+  - Figma Visual Design
+  - Figma Prototyping
+  - HTML/CSS Pixel Perfect Replications
+  - User Testing

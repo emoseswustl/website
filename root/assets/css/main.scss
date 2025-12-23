@@ -7,9 +7,13 @@
     --color-light-gray-alpha: #eaeaeaa6;
     --color-dark-gray: #1E1E1E;
     --color-gradient-start: #8D37B5;
-    --color-gradient-end: #7FABFF;
+    --color-gradient-end: #3763B3;
     --drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     --inset-drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+html {
+    background-color: var(--color-dark-gray);
 }
 
 body, p, span, div {
@@ -48,18 +52,25 @@ body {
     align-items: center;
     width: max-content;
     filter: drop-shadow(var(--drop-shadow));
+    text-decoration: none;
 }
 
-.logo a {
+.logo span {
     padding-left: 20px;
     font-size: 24px;
     color: var(--color-white);
     font-weight: 600;
-    text-decoration: none;
+    font-family: 'Roboto Serif', serif;
 }
 
 button {
     background-color: var(--color-light-gray);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.95);
 }
 
 .links button {
@@ -74,6 +85,12 @@ button {
     font-size: 22px;
     font-weight: 600;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.links button:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.3));
 }
 
 .links button a {
@@ -94,6 +111,12 @@ button {
     height: 50px;
     font-size: 32px;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sm_buttons button:hover, .menubutton button:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.3));
 }
 
 #current {
@@ -133,6 +156,35 @@ main {
     align-items: center;
 }
 
+.filter_buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filter_btn {
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+    border-radius: 10px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter_btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.95) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+}
+
+.filter_btn.active {
+    background-color: var(--color-gradient-end);
+    color: var(--color-white);
+}
+
 .title_and_button button {
     background-color: var(--color-gradient-start);
     color: var(--color-white);
@@ -142,6 +194,12 @@ main {
     font-weight: 600;
     padding: 8px 16px;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.title_and_button button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1) drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.3));
 }
 
 .project_info button {
@@ -152,14 +210,85 @@ main {
     font-weight: 600;
     padding: 8px 12px;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.project_info button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
 }
 
 .project_info button i {
     padding-right: 4px;
 }
 
+.project_top_row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.project_thumbnail {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project_thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
+}
+
+.project_icon i {
+    font-size: 60px;
+    color: var(--color-white);
+}
+.project_header {
+    flex-grow: 1;
+}
+
+.project_header h2 {
+    margin-bottom: 8px;
+}
+
+.project_header p {
+    margin: 0;
+}
+
+.project_description {
+    margin-bottom: 15px;
+}
+
+.project_description p {
+    margin: 0;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project_info {
+    text-align: right;
+}
+
 .github {
     background-color: #C1AFFF;
+}
+
+.figma {
+    background-color: #FF7262;
 }
 
 .link {
@@ -175,26 +304,179 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+    align-items: stretch;
+}
+
+.project_item {
+    width: calc(50% - 20px);
+    transition: all 0.3s ease;
+    display: flex;
+}
+
+.project_item > .feature_rect {
+    width: 100%;
 }
 
 .project_row > .feature_rect {
-    width: 40%;
+    width: calc(50% - 20px);
+    flex-shrink: 0;
 }
 
 .feature_rect {
-    border-radius: 40px;
+    border-radius: 25px;
     padding: 25px;
     background-color: var(--color-light-gray);
     color: var(--color-black);
-    flex-grow: 1;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.duration_badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-gradient-end);
+    color: var(--color-white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.project_row > .feature_rect,
+.project_item > .feature_rect {
+    display: flex;
+    flex-direction: column;
 }
 
 .feature_rect h3, .feature_rect h2 {
     margin-top: 0;
 }
 
+.feature_rect h3 + h4 {
+    margin-top: -10px;
+}
+
+.feature_rect > *:last-child {
+    margin-bottom: 0;
+}
+
+.project_info {
+    text-align: right;
+    margin-top: auto;
+}
+
 .semi {
     font-weight: 600;
+}
+
+.contact_section {
+    text-align: center;
+}
+
+.contact_section p {
+    margin: 0;
+}
+
+.contact_buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.contact_btn {
+    color: var(--color-black);
+    border-radius: 10px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.contact_btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+}
+
+.contact_btn i {
+    padding-right: 4px;
+}
+
+.contact_buttons a:nth-child(1) .contact_btn {
+    background-color: #4563B3;
+}
+
+.contact_buttons a:nth-child(2) .contact_btn {
+    background-color: #8D37B5;
+}
+
+.exp_header,
+.edu_header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.exp_header .duration_badge,
+.edu_header .duration_badge {
+    position: static;
+    margin-left: auto;
+    order: 3;
+}
+
+.exp_logo,
+.edu_logo {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp_logo img,
+.edu_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.exp_icon,
+.edu_icon {
+    background: var(--color-gradient-end);
+}
+
+.exp_icon i,
+.edu_icon i {
+    font-size: 40px;
+    color: var(--color-white);
+}
+
+.exp_info,
+.edu_info {
+    flex-grow: 1;
+}
+
+.exp_info h3,
+.edu_info h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.exp_info h3 + h4,
+.edu_info h3 + h4 {
+    margin-top: 8px;
+}
+
+.exp_info h4,
+.edu_info h4 {
+    margin: 0;
 }
 
 @media screen and (min-width: 1200px) {
@@ -244,5 +526,22 @@ main {
     }
     .show_all {
         max-height: 600px;
+    }
+    .project_item,
+    .project_row > .feature_rect {
+        width: 100%;
+    }
+    .project_row {
+        gap: 20px;
+    }
+    .exp_header,
+    .edu_header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .exp_header .duration_badge,
+    .edu_header .duration_badge {
+        margin-left: 0;
+        align-self: flex-start;
     }
 }

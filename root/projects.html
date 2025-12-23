@@ -3,11 +3,18 @@ layout: default
 title: Projects
 ---
 <div class="description">
-    <h2>My projects, from most recent to least:</h2>
+    <h2>My projects, starting with the most recent ones:</h2>
+</div>
+<div class="filter_buttons">
+    <button class="filter_btn active" data-filter="all">All</button>
+    <button class="filter_btn" data-filter="development">Development</button>
+    <button class="filter_btn" data-filter="design">Design</button>
 </div>
 <div class="project_row">
     {% assign projects_by_date = site.data.projects | sort: "date" | reverse %}
     {% for project in projects_by_date %}
-        {% include project_content.html %}
+        <div class="project_item" data-category="{{ project.category }}">
+            {% include project_content.html %}
+        </div>
     {% endfor %}
 </div>

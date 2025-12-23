@@ -1,0 +1,27 @@
+- school: Washington University in St. Louis
+  location: St. Louis, MO
+  degree: Bachelor of Science in Computer Science
+  gpa: 3.79 GPA
+  duration: Expected May 2026
+  logo: /assets/img/companies/WashU.png
+  minors:
+    - Human-Computer Interaction
+    - Psychological & Brain Sciences
+  coursework:
+    - Data Structures & Algorithms
+    - Parallel & Concurrent Programming
+    - Analysis of Algorithms
+    - Programming Systems & Languages
+    - Human-Centered Design
+    - Computer Security
+  activities:
+    - Undergraduate Student Advisory Board for the Center for Career Engagement
+    - TRiO Scholar
+    - oSTEM
+    - Philippine United Student Organization
+    - Active Minds
+    - Access STL
+  honors:
+    - Chancellor's Career Fellow
+    - Missouri Bright Flight
+    - Dean's List (all semesters)

@@ -5,10 +5,10 @@ title: Home
 
 <div class="description">
     <h1>Hi, I'm Ethan!</h1>
-    <h2>I am a student and full-stack developer who is passionate about designing programs that work for people.</h2>
-    <p>Currently, I'm a junior at WashU majoring in computer science and minoring in psychology and human-computer interaction.</p>
-    <p>Outside of my courses, I’ve been involved as an Intro to CS Section Lead TA, a full-stack developer intern for BJC Health System, a member of Active Minds, and a Chancellor’s Career Fellow. In my free time, I enjoy biking, taking care of my succulents, and spending time with nature.</p>
-    <p>Here’s some of what I’ve been up to lately!</p>
+    <h2>I am a student and full-stack software developer who is passionate about designing programs that work for people.</h2>
+    <p>Currently, I'm a senior at WashU majoring in computer science and minoring in human-computer interaction and psychological & brain sciences.</p>
+    <p>Outside of my courses, I've been involved as an Intro to CS Head TA, a product engineering intern for Maritz, a software development intern for BJC Health System, and a Chancellor's Career Fellow. In my free time, I enjoy biking, taking care of my succulents, and spending time with nature.</p>
+    <p>Here's some of what I've been up to lately!</p>
 </div>
 <br>
 
@@ -22,7 +22,7 @@ title: Home
         {% include project_content.html %}
     {% endfor %}
 </div>
-<br>
+<br><br>
 
 <div class="title_and_button">
     <h2>Experience and Skills</h2>
@@ -30,6 +30,15 @@ title: Home
 </div>
 <div class="row">
     {% for experience in site.data.jobs limit:1 %}
-        {% include exp_content.html %}
+        {% include card_content.html type="exp" item=experience title_key="company" subtitle_key="role" %}
     {% endfor %}
+</div>
+<br><br>
+
+<div class="title_and_button">
+    <h2>Get in Touch</h2>
+    <div class="contact_buttons">
+        <a href="https://www.linkedin.com/in/ethanmoses04/" target="_blank"><button class="contact_btn"><i class="fa-brands fa-linkedin"></i>LinkedIn</button></a>
+        <a href="mailto:e.g.moses@wustl.edu"><button class="contact_btn"><i class="fa-regular fa-envelope"></i>Email</button></a>
+    </div>
 </div>

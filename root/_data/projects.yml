@@ -3,19 +3,25 @@
   skills: Socket.IO, JavaScript, HTML, CSS
   github: https://github.com/emoseswustl/chatapp
   link: https://chatappdeploy.fly.dev/
-  description: Pair programmed with a partner through VS Code Live Share to implement chat rooms and the ability to send polls and photos. Learned how to represent users and chat rooms within objects, letting admins add or ban users in rooms.
+  icon: fa-solid fa-comments
+  category: development
+  description: Pair programmed with VS Code Live Share to implement rooms and the ability to send polls and photos. Learned how to represent users and chat rooms within objects, letting admins add or ban users in rooms.
 
 - name: Banking System
   date: 2024-05-01
   skills: Java, JUnit, Bash Scripting, GitHub Projects
   github: https://github.com/emoseswustl/GroupBankingApp
-  description: Took initiative by learning how to best store account and user records with hash maps, and coding a custom file database to store account records, gaining deep-level knowledge on its inner workings. Responsible for managing a project for three other developers by turning user stories into concise tasks, tracking progress to meet our biweekly performance goals, and reviewing changes to maintain functionality. 
+  icon: fa-solid fa-building-columns
+  category: development
+  description: Managed a project for three other developers by turning user stories into concise tasks, tracking progress to meet biweekly performance goals, and reviewing pull requests to maintain functionality. Coded a custom file database to store account records, gaining deep-level knowledge on its inner workings. 
 
 - name: FBLA Website Design
   date: 2022-07-05
   skills: HTML, CSS, Netlify Hosting
   github: https://github.com/emoseswustl/fblawebdesignsite
   link: https://calderatech.netlify.app/
+  icon: fa-solid fa-globe
+  category: development
   description: Created a tech repair business website, ensuring mobile compatibility with media queries and a responsive grid system. Placed 4th at the FBLA National Leadership Conference in Chicago, IL. Crafted a PowerPoint that showcased features of the website, along with use case scenarios, and presented it in district, state, and national level FBLA competitions.
 
 - name: Personal Portfolio
@@ -23,4 +29,31 @@
   skills: HTML, CSS, Figma, Jekyll
   github: https://github.com/emoseswustl/website
   link: https://ethanmos.es
+  icon: fa-solid fa-user
+  category: development
   description: Designed and built a personal portfolio from scratch, using Figma to craft a template and Jekyll to speed development and store repetitive elements (such as these projects) in YAML files to be displayed in templates.
+
+- name: Daniel Nigro Archive
+  date: 2025-10-20
+  skills: Iterative Design, Figma, Prototyping, Mobile-First Design
+  figma: https://www.figma.com/proto/5Yljc4swIzozpfqZr7m6VD/Ethan-Moses---Archive-Project?node-id=355-3&t=1H3uB5mtmqCceXAj-1
+  image: /assets/img/projects/DanNigro.png
+  category: design
+  description: Used Figma to design and create a prototype of a website that informs people of Daniel Nigro's music production work, with a compilation of projects he's worked on, displayed with different categories and filters..
+
+- name: Packing App
+  date: 2025-12-12
+  skills: C++, CMake, GitHub Actions, Testing
+  github: https://github.com/cse4504-fl25-3-wustl/team-project-oliviaaylaethan
+  image: /assets/img/projects/package.png
+  category: development
+  description: Worked on a team of three developers to build a C++ application to implement efficient packing strategies for placing art pieces of varying sizes into boxes based on constraints, handling real data and edge cases.
+
+- name: See STL App
+  date: 2025-12-01
+  skills: Iterative Design, Figma, Prototyping, Mobile-First Design
+  figma: https://www.figma.com/proto/6OnoCeexfb4njNDizYYdt4/Ethan-Moses---Site-App-Project?node-id=358-18&t=juaOzCzGcAGjkyBG-1
+  image: /assets/img/projects/siteapp.png
+  category: design
+  description: Used Figma to design and create a prototype for a map-based app that provides people in St. Louis with must-see destinations.
+
