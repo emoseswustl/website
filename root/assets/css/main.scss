@@ -505,7 +505,7 @@ main {
         position: fixed;
         top: 0px;
         width: 100vw;
-        max-height: 90px;
+        max-height: 80px;
         transition: max-height 0.5s ease-out;
         overflow: hidden;
     }
@@ -535,7 +535,7 @@ main {
 
     body {
         flex-direction: column;
-        margin-top: 90px;
+        margin-top: 80px;
     }
     main {
         padding: 20px 5vw 40px 5vw;
